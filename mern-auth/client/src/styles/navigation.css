@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+.nav-item,
+.nav-link,
+.af-navbar {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-item,
+.nav-link {
+  color: white;
+  font-size: 17px;
+  margin: 0 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.af-navbar {
+  background-color: #011f40;
+}
