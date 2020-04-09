@@ -1,14 +1,7 @@
 import React from "react";
 
-import Navigation from "../core/Navigation";
-
 function App() {
-  return (
-    <div className='App'>
-      <Navigation />
-      Hello World
-    </div>
-  );
+  return <div className='App'>Hello World</div>;
 }
 
 export default App;
