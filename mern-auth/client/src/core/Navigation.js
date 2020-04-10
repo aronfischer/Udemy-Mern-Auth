@@ -1,17 +1,21 @@
 import React from "react";
+import { Link, withRouter } from "react-router-dom";
 
 import "../styles/navigation.css";
 
 const Navigation = ({ history, match }) => {
-  console.log("history", history);
-  console.log("match", match);
+  const isActive = (urlPath) => {
+    if (match.path === urlPath) {
+      return { color: "rgba(255,255,255, 0.3)" };
+    }
+  };
 
   return (
     <nav className='navbar navbar-expand-lg navbar-dark af-navbar'>
       <div className='container'>
-        <a href='/' className='navbar-brand'>
+        <Link to='/' className='navbar-brand'>
           My Brand
-        </a>
+        </Link>
 
         <button
           className='navbar-toggler'
@@ -25,9 +29,9 @@ const Navigation = ({ history, match }) => {
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav w-100'>
             <li className='nav-item mr-auto'>
-              <a href='/' className='nav-link'>
+              <Link to='/' className='nav-link' style={isActive("/")}>
                 Home
-              </a>
+              </Link>
             </li>
 
             <li className='nav-item'>
@@ -44,4 +48,4 @@ const Navigation = ({ history, match }) => {
   );
 };
 
-export default Navigation;
+export default withRouter(Navigation);
