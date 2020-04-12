@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "./Navigation";
+import SignUpLogin from "../components/auth/SignUp_Login";
 
 import ReactNotification, { store } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
@@ -24,6 +25,7 @@ const Layout = () => {
     <>
       <Navigation />
       <ReactNotification />
+      <SignUpLogin />
     </>
   );
 };
