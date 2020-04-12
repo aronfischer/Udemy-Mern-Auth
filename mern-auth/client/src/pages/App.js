@@ -1,13 +1,12 @@
 import React from "react";
 
-import Navigation from "../core/Navigation";
+import Layout from "../core/Layout";
 
 function App() {
   return (
-    <div className='App'>
-      <Navigation />
-      Hello World
-    </div>
+    <Layout>
+      <div className='App'>Hello World</div>
+    </Layout>
   );
 }
 
