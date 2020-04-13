@@ -1,0 +1,146 @@
+.af-form-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  z-index: 100;
+}
+
+.af-form-box {
+  width: 280px;
+  height: 570px;
+  position: relative;
+  margin: 2% auto;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 2px 2px 20px lightgray;
+}
+
+.af-button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 2px 2px 20px lightgray;
+  border-radius: 30px;
+}
+
+.af-toggle-btn {
+  padding: 10px 30px;
+  margin: 0;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  text-align: center;
+  position: relative;
+}
+
+#af-btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  border-radius: 30px;
+  transition: 0.5s;
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+}
+
+.af-input-group {
+  position: absolute;
+  top: 180px;
+  width: 180px;
+  transition: 0.5s;
+}
+
+.af-input-wrapper {
+  position: relative;
+}
+
+.af-input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 20px;
+  border: none;
+  border-bottom: 2px solid #999;
+  background: transparent;
+  display: block;
+}
+
+.af-input-wrapper label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.af-input-field:focus + label,
+.af-input-field:not([value=""]) + label {
+  position: absolute;
+  top: -12px;
+  color: #86a8e7;
+}
+.af-input-field:focus {
+  border-bottom: 2px solid #86a8e7;
+}
+
+input:active {
+  outline: none;
+}
+
+.af-submit-btn {
+  width: 85%;
+  padding: 15px 30px;
+  cursor: pointer;
+  display: block;
+  margin-top: 30px;
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  box-shadow: 0 3px lightgrey;
+}
+
+.af-submit-btn:hover {
+  box-shadow: 0 1px darkgrey;
+  transform: translateY(1px);
+}
+
+.af-submit-btn:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+#af-login-form,
+#af-sign-up-form {
+  left: 50px;
+}
+
+.af-forgot-password-btn {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: none;
+  background: transparent;
+}
+
+.af-forgot-password-btn:hover {
+  text-decoration: underline;
+}
+
+.af-forgot-password-btn:active {
+  color: darkgrey;
+}
+
+@media screen and (min-width: 480px) {
+  .af-form-box {
+    width: 380px;
+    height: 570px;
+  }
+
+  .af-input-group {
+    width: 280px;
+  }
+}
