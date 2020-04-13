@@ -1,7 +1,5 @@
 import React from "react";
 
-import "../../styles/authForm.css";
-
 const SignUpLogin = () => {
   return (
     <div>
