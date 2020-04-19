@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const crypto = require("crypto");
 
+// User Schema
 const UserSchema = new Schema(
   {
     username: { type: String, required: true, trim: true, unique: true },
@@ -26,20 +27,21 @@ UserSchema.virtual("password")
   });
 
 // Methods
-// Create salt: creates a random string, which adds additional security to our hashed password
+// Create Salt : Return a random string to add additional security to our hashed_password
 UserSchema.method.createSalt = function () {
-  // Create salt
   return crypto.randomBytes(16).toString("hex");
 };
 
-// Encrypt a user password
+// Encrypts users password
 UserSchema.method.encryptPassword = function (password) {
   return crypto
     .pbkdf2Sync(password, this.salt, 1000, 64, "sha512")
     .toString("hex");
 };
 
-// Authenticate : Return true or false
+// Authenticates user : Returns true or false
 UserSchema.method.authenticate = function (password) {
-  return this.encryptPassword(password) === this.hashed_password;
+  return encryptPassword(password) === this.hashed_password;
 };
+
+module.exports = mongoose.model("User", UserSchema);
