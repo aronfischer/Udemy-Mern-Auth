@@ -41,6 +41,7 @@ export const login = (response, next) => {
 export const logout = (next) => {
   removeCookie("token");
   removeLocalStorage("user");
+  next();
 };
 
 // Returns the user when he is logged in and returns false when he is not
